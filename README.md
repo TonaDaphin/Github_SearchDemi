@@ -1,4 +1,4 @@
-<!-- # Github-Search
+# Github-Search
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
@@ -21,4 +21,4 @@ This website will help you to search Github users with information about their a
 
 ## License
 
-*Tona Daphin* 2019 -->
+*Tona Daphin* 2019
