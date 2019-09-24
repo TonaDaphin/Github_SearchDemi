@@ -1,43 +1,24 @@
-# GithubSearch
+<!-- # Github-Search
 
-### Developed By
-[Carine I. SEMWAGA](https://github.com/Krasivaya)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
-### Description
-This is an Angular application that allows a user to input their username into a form 
-and be able to see a brief summary of their profile, and a list of their repos with 
-description and the language(s) used.
 
-### Technologies Used
+## Author
 
-1. Angular CLI
-2. Angular 6
-3. Typescript and JavaScript 
-4. HTML
-5. CSS & Bootsrap
-6. Git Control
-7. Github API
+Tona Daphin
 
-### Setup/Installation Requirements
+## Development server
 
-* Open your terminal
-* initialize github, git clone https://github.com/Krasivaya/Github-search.git
-* cd Github-Search
-* open folder in prefered IDE
-* open terminal
-* run "ng serve" to open the application in your localhost
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Known Bugs
-No bug known. If you found any please contact!
+## Description
 
-### Live site
-[Github-Search](https://Krasivaya.github.io/Github-Search/)
+This website will help you to search Github users with information about their accounts and repositories 
 
-## Running end-to-end tests
+## Live link
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+[Gihub-search](https://tonadaphin.github.io/Github-search/).
 
-### License
-This project is under the [MIT](https://github.com/nignanthomas/github/blob/master/LICENSE) license.
+## License
 
-##### Copyright (c) 2019 Carine I. SEMWAGA.
+*Tona Daphin* 2019 -->

@@ -6,64 +6,77 @@
 <body>
   <div class="container"><br><br><br>
                   <!-- Search -->
-    <div class="jumbotron">
-      <h1 class="display-3">Welcome to Github Search</h1>
-      <input class="form-control" placeholder="Enter Username" [(ngModel)]='newUser' (keyup)="addNew()"/><br>
-      <button class="btn btn-secondary" (click)="addNew()">Search</button>
+    <div>
+        <div class="about">
+            <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR98xsHSk07iIHLDZ6RL41kqCHhYNV2RJ6_9cm4fySHTKnBy7Rq">
+            <p class="lead text-center">This is an Angular application that allows a user to input the Gihub username into a form
+              <br><br> and be able to see a brief summary of the profile, and a list of their repositories with
+              <br><br> description and the language(s) used. </p>
+          </div>
+          <hr><br><br>
+      <input class="form-control" [(ngModel)]='newUser' (keyup)="addNew()" placeholder="Enter the username"/><br>
+      <button class="btn btn-info" (click)="addNew()">Search</button>
     </div>
     <div *ngIf="gs" class="hideSeek"> 
-      <h1 class="heading1">Github Search</h1>
-      <div class="progress">
-          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-      </div>
       <hr />
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
                     <!-- User Info -->
           <div>
-            <h3 class="panel-title">User:</h3><hr>
+            <h3 class="panel-title">User</h3>
             <br />
-            <img width="30%" src="{{ gs.avatar_url }}"/>
+            <div class="row">
+            <div class="col-md-6">
+            <img width="50%" src="{{ gs.avatar_url }}"/>
             <br>
+            </div>
+            <div class="col-md-6">
             <ul class="list-group">
                 <li appCool class="list-group-item d-flex justify-content-between align-items-center">
-                  Name:
-                  <span class="badge badge-secondary badge-pill">{{ gs.login }}</span>
+                  Username:
+                  <span class="badge badge-info badge-pill">{{ gs.login }}</span>
                 </li>
                 <li appCool class="list-group-item d-flex justify-content-between align-items-center">
                   Followers:
-                  <span class="badge badge-secondary badge-pill">{{ gs.followers }}</span>
+                  <span class="badge badge-info badge-pill">{{ gs.followers }}</span>
                 </li>
                 <li appCool class="list-group-item d-flex justify-content-between align-items-center">
                   Following:
-                  <span class="badge badge-secondary badge-pill">{{ gs.following }}</span>
+                  <span class="badge badge-info badge-pill">{{ gs.following }}</span>
                 </li>
                 <li appCool class="list-group-item d-flex justify-content-between align-items-center">
                   Repo(s):
-                  <span class="badge badge-secondary badge-pill">{{ gs.public_repos }}</span>
+                  <span class="badge badge-info badge-pill">{{ gs.public_repos }}</span>
                 </li>
                 <li appCool class="list-group-item d-flex justify-content-between align-items-center">
-                  Joined:
-                  <span class="badge badge-secondary badge-pill">{{ gs.created_at | joined }} day(s) ago</span>
+                  Created:
+                  <span class="badge badge-info badge-pill">{{ gs.created_at | date }} </span>
                 </li>
               </ul><br>
-            <p><a href="{{gs.html_url}}" target="blank" class="btn btn-outline-secondary">View profile on github</a></p>
+            </div>
+            </div>
+            <br />
+            <p><a href="{{gs.html_url}}" target="blank" class="btn btn-outline-info">View github account</a></p>
+          </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="row">
+        <div class="col-md-12">
                     <!-- Repo Info -->
-          <h3 class="panel-title">Repositories:</h3><hr>
+        <div class="repos">
+          <h3 class="panel-title">Repositories</h3><hr>
           <div *ngFor='let repo of repos'>
-            <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+            <div id="repo"class="card text-white bg-info mb-3" style="max-width: 80rem;">
               <div class="card-header"><h4><a class="link" href="{{ repo.html_url }}" target="blank">{{ repo.name }}</a></h4></div>
               <div class="card-body">
                 <h6 class="card-title">{{ repo.description }}</h6>
                 <h5 class="card-text">{{ repo.language }}</h5>
               </div>
-            </div>
-          </div>
         </div>
       </div>
+          </div>
+        </div>
+        </div>
     </div>
   </div>
   </body>

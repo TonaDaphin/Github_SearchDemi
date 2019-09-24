@@ -37,6 +37,5 @@ export class GsRequestService {
       html_url: any;
     }
     return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token="+(environment.key))
-    // return this.http.get<ApiResponse[]>("https://api.github.com/users/"+this.newUser+"/repos?access_token=e80cb3652823dadf253c3f12792ab124a1ea141d")
   }
 }
